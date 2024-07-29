@@ -16,7 +16,7 @@
 
     --section-gaps: 100px;
     --section-md-gaps: 48px;
-    
+    --section-sm-gaps: 25px;
 }
 
 
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--primary-fonts);
     color: var(--primary-color);
     overflow-wrap: inherit;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 a {
@@ -61,7 +61,7 @@ a, input[type="submit"], button {
 }
 
 
-.social-links ul,
+.social-link,
 .sub-menu,
 .single-test-sty ul,
 .site-footer ul,
@@ -97,6 +97,9 @@ a, input[type="submit"], button {
 }
 .section-md-gaps {
     padding: var(--section-md-gaps) 0;
+}
+.section-sm-gaps {
+    padding: var(--section-sm-gaps) 0;
 }
 
 /* End Color ,gaps and other css */
@@ -140,6 +143,67 @@ a, input[type="submit"], button {
 
 /* End Title sty css */
 
+/* pagination */
+
+.pagination{
+    display: flex;
+    list-style: none;
+    margin: 30px -3px 0;
+    padding: 0;
+}
+.pagination li{
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.pagination .page-numbers{
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #323232;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: 0 0;
+    border: 1px solid #ccc;
+    transition: var(--default-transition);
+}
+.pagination .page-numbers:hover, .pagination .page-numbers.current{
+    color: #fff;
+    background: #323232;
+    border-color: #323232;
+    text-decoration: none;
+}
+
+/* pagination */
+
+/* social-link */
+
+.social-link{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.social-link li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.social-link li a{
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    background-color: #dedddd;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transition: var(--default-transition);
+}
+
+/* social-link */
+
 /* btn-style */
 
 .btn-box{
@@ -172,6 +236,7 @@ a, input[type="submit"], button {
     font-size: 16px;
     line-height: 22px;
     color: #757575;
+    background-color: #fff;
 }
 .btn-box.red:hover{
     background-color: var(--dark-color);
@@ -209,6 +274,13 @@ a, input[type="submit"], button {
 }
 
 /* btn-style */
+
+.p-20{
+    padding: 20px;
+}
+.box-wrapper {
+    box-shadow: -1px 5px 6px #efefef;
+}
 
 /* splide */
 
@@ -276,11 +348,14 @@ a, input[type="submit"], button {
 input{
     outline: none;
 }
-.form-input{
-    padding: 11px 15px;
-    background-color: #F5F5F5;
-    border: 0;
-    border-radius: 6px;
+.form-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+.form-textarea{
+    height: 150px   ;
 }
 
 /* input */
@@ -291,9 +366,11 @@ input{
     border-radius: 8px;
     overflow: hidden;
     height: 100%;
+    background-color: #fff;
+}
+.vertical-box a{
     display: flex;
     flex-direction: column;
-    background-color: #fff;
 }
 .vertical-box .image{
     height: 180px;
@@ -322,11 +399,10 @@ input{
     line-height: 22px;
     font-weight: 600;
     margin-bottom: 0;
-}
-.vertical-box .title a{
     color: var(--primary-color);
+    transition: var(--default-transition);
 }
-.vertical-box .title:hover a{
+.vertical-box:hover .title{
     color: var(--secondary-color);
 }
 .vertical-box .content .date{
@@ -346,12 +422,17 @@ input{
 /* horizontal-box */
 
 .horizontal-box{
-    display: flex;
+    /* display: flex; */
     border: 1px solid #D9D9D9;
     border-radius: 8px;
     overflow: hidden;
-    align-items: center;
     background-color: #fff;
+    height: 100%;
+}
+.horizontal-box a{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .horizontal-box .image{
     height: var(--size);
@@ -371,11 +452,10 @@ input{
     line-height: 22px;
     font-weight: 600;
     font-family: var(--primary-fonts);
-}
-.horizontal-box .content .title a{
     color: var(--primary-color);
+    transition: var(--default-transition);
 }
-.horizontal-box .content .title:hover a{
+.horizontal-box:hover .content .title{
     color: var(--secondary-color);
 }
 .horizontal-box .date{
@@ -558,7 +638,7 @@ input{
     background-color: var(--light-white);
 }
 .latest-update{
-    padding: 16px 0;
+    padding: 16px 0 0;
 }
 .latest-update .text-wrap{
     background-color: var(--light-white);
@@ -671,7 +751,7 @@ input{
 
 /* trending-news-section */
 
-.trending-news-section .news-box, .trending-news-section .though-sidebar{
+.multi-div > div + div{
     padding-top: 64px;
 }
 
@@ -871,6 +951,12 @@ input{
     flex-direction: column;
     gap: 12px;
 }
+.subscribe-form .form-input{
+    padding: 11px 15px;
+    background-color: #F5F5F5;
+    border: 0;
+    border-radius: 6px;
+}
 .subscribe-form input{
     width: 100%;
     outline: none;
@@ -924,3 +1010,188 @@ input{
         transform: translate3d(0, 0, 0);
     }
 }
+
+/* error-content */
+
+.error-content{
+    min-height: calc(100vh - 320px) ;
+    display: grid;
+    place-content: center;
+}
+.error-content .content{
+    max-width: 400px;
+    text-align: center;
+}
+.error-content .btn-wrap{
+    justify-content: center;
+}
+.error-content .title{
+    font-size: 96px;
+    line-height: 96px;
+}
+.error-content .sub-title{
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+/* error-content */
+
+/* single-news-content */
+
+.single-news-content .title{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.single-news-content .date-category{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+    row-gap: 5px;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.single-news-content .date-category > li > span{
+    font-size: 13px;
+    position: relative;
+    color: #323232;
+}
+.single-news-content .date-category .catagory-list a:not(:last-child):after{
+    content: ',';
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.single-news-content .date-category .catagory-list a{
+    text-transform: capitalize;
+}
+.single-news-content .date-category > li > span > i{
+    padding-right: 5px;
+}
+.single-news-content figure img{
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.single-share-link {
+    padding-left: 35px;
+    position: relative;
+    margin-top: 30px;
+}
+.single-share-link:before {
+    content: '\f1e0';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding-right: 10px;
+    border-right: 1px solid #323232;
+}
+.single-share-link li a:hover {
+    color: #fff !important;
+    background: #323232;
+}
+.next-prev-btn{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 0 -5px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.next-prev-btn > div{
+    width: 50%;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    padding: 0 5px;
+}
+.next-prev-btn > div > a{
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 5px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #727272;
+    transition: var(--default-transition);
+} 
+.next-prev-btn > div > a:hover{
+    color: var(--secondary-color);
+}
+.next-prev-btn .text::before{
+    position: absolute;
+    top: 1px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.next-prev-btn .prev-btn .text::before{
+    content: '\f100';
+    left: 0;
+}
+.next-prev-btn .next-btn .text::before{
+    content: '\f101';
+    right: 0;
+}
+.next-prev-btn .text{
+    position: relative;
+}
+.next-prev-btn .next-btn{
+    text-align: end;
+}
+.next-prev-btn .next-btn .text{
+    padding-right: 18px;
+}
+.next-prev-btn .prev-btn .text{
+    padding-left: 18px;
+}
+
+.comment-respond{
+    margin-top: 30px;
+}
+.comment-respond .coment-title{
+    font-size: 28px;
+    font-weight: 600;
+}
+.comment-respond .form-group label{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+.comment-respond .form-group input[type="checkbox"]{
+    width: auto;
+    margin-right: 5px;
+}
+.comment-respond .form-group.checkbox {
+    display: flex;
+    align-items: baseline;
+}
+
+/* single-news-content */
+
+/* side-bar */
+.side-bar .horizontal-box-list .horizontal-box + .horizontal-box{
+    margin-top: 20px;
+}
+.category-link-list {
+    gap: 10px;
+}
+.category-link-list .btn-box.transparent{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* side-bar */
+
+/* search-section */
+.search-section .main-title .title{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.search-section .main-title .title span{
+    font-size: 22px;
+}
+/* search-section */

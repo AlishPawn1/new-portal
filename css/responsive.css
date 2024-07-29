@@ -11,6 +11,9 @@
         --bs-gutter-x: 24px;
         --bs-gutter-y: 16px;
     }
+    .feature-section .container > .custom-gap-32-24{
+        --bs-gutter-y: 32px;
+    }
     .custom-gap-37-24{
         --bs-gutter-x: 24px;
         --bs-gutter-y: 3rem;
@@ -84,7 +87,7 @@
     .banner-box .content{
         padding: 24px;
     }
-    .trending-news-section .horizontal-box.big{
+    .trending-news-section .horizontal-box.big a{
         flex-direction: column;
     }
     .trending-news-section .horizontal-box.big .image{
@@ -97,6 +100,7 @@
         border-radius: 0 0px 8px 8px;
         padding: 16px;
         min-height: unset;
+        justify-content: space-between;
     }
     .footer-content{
         max-width: 355px;
@@ -135,17 +139,26 @@
     .feature-section .vertical-box .image {
         height: 190px;
     }
+    .error-content{
+        min-height: calc(100vh - 210px);
+    }
+    .single-page-section .side-bar{
+        margin-top: 30px;
+    }
 }
 @media screen and (max-width: 575px) {
     .container{
         padding: 0 20px;
+    }
+    .box-wrapper {
+        padding: 15px;
     }
     .learn-more-btn.btn-icon svg{
         width: 15px;
         height: 10px;
     }
     .category-list-section .btn-wrap{
-        gap: 16px;
+        gap: 10px;
     }
     .category-list-section .btn-box.transparent{
         padding: 10px;
@@ -203,5 +216,39 @@
     }
     .footer-item .title{
         margin-bottom: 15px;
+    }
+    .error-content{
+        min-height: calc(75vh - 140px);
+    }
+    .error-content .title {
+        font-size: 64px;
+        line-height: 64px;
+    }
+    .error-content .sub-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .single-news-content .title{
+        font-size: 24px;
+    }
+    .next-prev-btn{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .next-prev-btn > div{
+        width: 100%;
+    }
+    .next-prev-btn .next-btn{
+        text-align: center;
+    }
+    .next-prev-btn .text{
+        display: inline-block;
+    }
+    .next-prev-btn > div + div{
+        margin-top: 20px;
+    }
+    .search-section .main-title .title{
+        font-size: 22px;
     }
 }
