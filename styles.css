@@ -773,7 +773,7 @@ input{
     font-family: var(--primary-fonts);
     padding: 8px 6px;
 }
-.popular-recent-comment .side-tab button.active{
+.popular-recent-comment .side-tab button.active, .popular-recent-comment .side-tab button:hover{
     position: relative;
     color: var(--primary-color);
 }
