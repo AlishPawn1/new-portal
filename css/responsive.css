@@ -1,0 +1,207 @@
+
+
+@media screen and (min-width: 1400px) {
+    
+}
+@media screen and (max-width: 1024px) {
+    .custom-gap-24-32{
+        --bs-gutter-y: 16px;
+    }
+    .custom-gap-32-24{
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 16px;
+    }
+    .custom-gap-37-24{
+        --bs-gutter-x: 24px;
+        --bs-gutter-y: 3rem;
+    }
+    .logo-search-login .search-box{
+        max-width: 400px;
+    }
+    .hamburger-menu-wrap, .menu-close{
+        display: block;
+    }
+    .hamburger-menu{
+        text-align: end;
+    }
+    .hamburger-menu i{
+        font-size: 25px;
+    }
+    .hamburger-menu-wrap .row{
+        padding: 20px 0;
+        min-height: 60px;
+    }
+    .hamburger-menu-wrap .logo{
+        display: none;
+    }
+    .sticky .hamburger-menu-wrap .logo{
+        display: block;
+    }
+    .menu-wrap{
+        position: fixed;
+        right: -100vw;
+        min-height: 100vh;
+        padding: 75px 0px;
+        overflow-y: auto;
+        top: 0;
+        max-width: 400px;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9;
+        transition: var(--default-transition);
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-wrap.active{
+        right: 0;
+    }
+    .menu-wrap > *{
+        order: 2;
+        margin-bottom: 20px;
+    }
+    .primary-menu{
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        order: 2;
+    }
+    .menu-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .menu-close i{
+        font-size: 24px;
+    }
+    .primary-menu > li > a{
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 20px;
+    }
+    .banner-box .image{
+        height: 400px;
+    }
+    .banner-box .content{
+        padding: 24px;
+    }
+    .trending-news-section .horizontal-box.big{
+        flex-direction: column;
+    }
+    .trending-news-section .horizontal-box.big .image{
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+    .trending-news-section .horizontal-box.big .content{
+        border: 1px solid #D9D9D9;
+        border-top: 0;
+        border-radius: 0 0px 8px 8px;
+        padding: 16px;
+        min-height: unset;
+    }
+    .footer-content{
+        max-width: 355px;
+    }
+    .video-content .video .video-container, .video-content .video iframe{
+        min-height: 400px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .hamburger-menu-wrap .row{
+        padding: 15px 0;
+    }
+    .logo-search-login  .wrap{
+        gap: 32px;
+    }
+    .logo-search-login .logo{
+        width: 100%;
+        text-align: center;
+    }
+    .hamburger-menu-wrap .logo{
+        display: block;
+    }
+    .logo-search-login{
+        display: none;
+    }
+    .top-text-wrap .item{
+        font-size: 12px;
+    }
+    .search-box{
+        padding: 0 20px;
+        order: 1;
+    }
+    .login-register{
+        padding: 0 20px;
+    }
+    .feature-section .vertical-box .image {
+        height: 190px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .container{
+        padding: 0 20px;
+    }
+    .learn-more-btn.btn-icon svg{
+        width: 15px;
+        height: 10px;
+    }
+    .category-list-section .btn-wrap{
+        gap: 16px;
+    }
+    .category-list-section .btn-box.transparent{
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .top-header .text-wrap {
+        justify-content: center;
+        gap: 15px;
+    }
+    .top-header{
+        display: none;
+    }
+    .latest-update .text-wrap > .text{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .latest-update-slide a.text{
+        font-size: 12px;
+    }
+    .latest-update .text-wrap{
+        gap: 10px;
+    }
+    .latest-update .text-wrap::after{
+        width: 20px;
+    }
+    .banner-section{
+        padding-top: 30px;
+    }
+    .banner-box .image{
+        height: 300px;
+    }
+    .banner-box .content{
+        padding: 24px 0 0;
+    }
+    .banner-box .title{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .video-content .video .video-container, .video-content .video iframe{
+        min-height: 300px;
+    }
+    .video-content .title, .feature-box .content .title{
+        font-size: 18px;
+        line-height: 26px;   
+    }
+    .feature-box .image{
+        height: 300px;
+    }
+    .copy-right-box .wrap{
+        justify-content: center;
+    }
+    .footer-link li + li{
+        margin-top: 5px;
+    }
+    .footer-item .title{
+        margin-bottom: 15px;
+    }
+}
