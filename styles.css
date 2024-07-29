@@ -669,7 +669,10 @@ input{
     font-family: var(--primary-fonts);
     /* min-width: 160px; */
     white-space: nowrap;
-
+}
+.latest-update .text-wrap .splide{
+    flex: 0 0 calc(100% - 192px);
+    max-width: calc(100% - 192px);
 }
 .latest-update-slide a.text{
     font-weight: 400;

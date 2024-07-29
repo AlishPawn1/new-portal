@@ -176,11 +176,16 @@
         padding: 10px;
         font-size: 12px;
     }
+    .latest-update .text-wrap .splide{
+        flex: 0 0 calc(100% - 101px);
+        max-width: calc(100% - 101px);
+    }
     .latest-update-slide a.text{
         font-size: 12px;
     }
     .latest-update .text-wrap{
         gap: 10px;
+        padding-right: 20px;
     }
     .latest-update .text-wrap::after{
         width: 20px;
