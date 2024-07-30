@@ -188,6 +188,9 @@
     .container{
         padding: 0 20px;
     }
+    .main-title.line h1.title span{
+        font-size: 32px;
+    }
     .box-wrapper {
         padding: 15px;
     }
