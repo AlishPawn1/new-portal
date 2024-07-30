@@ -275,8 +275,8 @@ a, input[type="submit"], button {
 
 /* btn-style */
 
-.p-20{
-    padding: 20px;
+.p-15{
+    padding: 15px;
 }
 .box-wrapper {
     box-shadow: -1px 5px 6px #efefef;
@@ -497,6 +497,9 @@ input{
 .horizontal-box.small .image{
     --size: 70px;
     flex: 0 0 var(--size);
+}
+.horizontal-box.small .date{
+    font-weight: 400;
 }
 
 /* horizontal-box */
@@ -770,11 +773,11 @@ input{
     background-color: #fff;
     border: 0;
     color: #B3B3B3;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 22px;
     font-family: var(--primary-fonts);
-    padding: 8px 6px;
+    padding: 8px 10px;
 }
 .popular-recent-comment .side-tab button.active, .popular-recent-comment .side-tab button:hover{
     position: relative;
@@ -1185,6 +1188,14 @@ input{
     padding: 5px 10px;
     font-size: 14px;
     font-weight: 600;
+}
+.single-page-section .side-bar > div{
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+}
+.single-page-section .side-bar > div + div{
+    margin-top: 24px;
 }
 /* side-bar */
 
