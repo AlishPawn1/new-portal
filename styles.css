@@ -279,7 +279,7 @@ a, input[type="submit"], button {
     line-height: 22px;
 }
 .learn-more-btn.btn-icon{
-    display: flex;
+    display: inline-flex;
     gap: 10px;
     transition: var(--default-transition);
 }
@@ -439,7 +439,8 @@ input{
     height: 100%;
     flex: auto;
     overflow: hidden;
-    gap: 12px;
+    /* gap: 12px; */
+    gap: 24px;
 }
 .vertical-box .title{
     font-size: 16px;
@@ -462,6 +463,14 @@ input{
 
 .vertical-box-list .vertical-box + .vertical-box{
     margin-top: 16px;
+}
+.vertical-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.vertical-bottom .author-name{
+    font-size: 14px;
 }
 
 /* vertical-box */
@@ -532,12 +541,14 @@ input{
 .horizontal-box-list .horizontal-box + .horizontal-box{
     margin-top: 24px;
 }
-.horizontal-box.small{
+.horizontal-box.small .content{
     padding: 12px;
 }
 .horizontal-box.small .image{
-    --size: 70px;
+    --size: 90px;
     flex: 0 0 var(--size);
+    border-radius: 8px;
+    overflow: hidden;
 }
 .horizontal-box.small .date{
     font-weight: 400;
@@ -817,6 +828,11 @@ input{
     width: 100%;
     transition: var(--default-transition);
 }
+.bottom-header .nav-bar.active .logo{
+    max-width: 150px;
+    visibility: visible;
+    opacity: 1;
+}
 .bottom-header .nav-bar .logo img{
     height: 35px;
     max-width: 150px;
@@ -832,11 +848,6 @@ input{
 }
 .bottom-header nav .nav-bar.active{
     justify-content: space-between;
-}
-.bottom-header .nav-bar.active .logo{
-    max-width: 150px;
-    visibility: visible;
-    opacity: 1;
 }
 .menu-wrap{
     position: relative;
@@ -880,7 +891,7 @@ input{
 }
 .banner-box .content{
     text-align: center;
-    padding: 24px 64px;
+    padding: 35px 64px 24px;
 }
 .banner-box .title{
     font-size: 32px;
@@ -1213,8 +1224,12 @@ input{
     padding-left: 2px;
     padding-right: 2px;
 }
-.single-news-content .date-category .catagory-list a{
+.single-news-content .date-category .catagory-list a .text{
     text-transform: capitalize;
+    transition: var(--default-transition);
+}
+.single-news-content .date-category .catagory-list a:hover .text{
+    color: var(--secondary-color);
 }
 .single-news-content .date-category > li > span > i{
     padding-right: 5px;
