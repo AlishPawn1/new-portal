@@ -16,28 +16,6 @@
 
     <!-- header -->
     <header class="site-header">
-        <div class="top-header">
-            <div class="container">
-                <div class="text-wrap">
-                    <div class="date-time top-text-wrap">
-                        <span class="item date">
-                            21 June 2081 Friday
-                        </span>
-                        <span class="item time">
-                            Friday, July 05, 2024
-                        </span>
-                    </div>
-                    <div class="top-address top-text-wrap">
-                        <span class="item address-degree">
-                            25.12°C Kathmandu
-                        </span>
-                        <span class="item air-quality">
-                            Air Quality in Kathmandu:108
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="logo-search-login">
             <div class="container">
                 <div class="wrap">
@@ -50,21 +28,33 @@
                         <form action="">
                             <div class="wrap">
                                 <div class="form-group">
-                                    <input type="text" placeholder="Search" class="form-input" id="searchInput">
+                                    <input type="text" placeholder="शीर्षक वा स्तम्भ खोज्नुहोस" class="form-input" id="searchInput">
                                 </div>
-                                <span class="remove-btn" onclick="clearSearch()">
-                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.22223 1L1.22223 9M1.22223 1L9.22223 9" stroke="#1E1E1E"
-                                            stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
+                                <div class="form-group submit">
+                                    <button type="submit">
+                                        <span class="icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
-                    <div class="login-register btn-wrap">
-                        <a href="#" class="btn-box light" title="">Sign in</a>
-                        <a href="#" class="btn-box black" title="">Register</a>
+                    <div class="date-time top-text-wrap">
+                        <div class="unicode">
+                            <a href="#" title="">
+                                <span class="icon">
+                                    <i class="fa-solid fa-keyboard"></i>
+                                </span>
+                                <span class="text">युनिकोड</span>
+                            </a>
+                        </div>
+                        <span class="item date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <div id="dateDisplay"></div>
+                        </span>
+                        <span class="item time">
+                            <i class="fa-regular fa-clock"></i>
+                            <div id="timeDisplay"></div>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -73,23 +63,10 @@
             <nav>
                 <div class="container">
                     <div class="nav-bar">
-                        <div class="hamburger-menu-wrap">
-                            <div class="row align-items-center">
-                                <div class="col-6">
-                                    <div class="logo">
-                                        <a href="index.html" title="">
-                                            <img src="image/logo.png" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="hamburger-menu">
-                                        <div class="menu-open">
-                                            <i class="fa-solid fa-bars"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="logo">
+                            <a href="index.html" title="">
+                                <img src="image/logo.png" alt="">
+                            </a>
                         </div>
                         <div class="menu-wrap">
                             <div class="menu-close">
@@ -109,13 +86,13 @@
                                     <a href="search-result.html" title="">Nation</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="">Politics</a>
+                                    <a href="#" title="">राजनीति</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="">Issues</a>
+                                    <a href="#" title="">विचार</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="">Global</a>
+                                    <a href="#" title="">अन्तर्राष्ट्रिय</a>
                                 </li>
                                 <li>
                                     <a href="#" title="">Business</a>
@@ -126,10 +103,23 @@
                                 <li>
                                     <a href="#" title="">Health</a>
                                 </li>
-                                <li>
+                                <li class="more-link">
                                     <a href="#" title="">More</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="#" title="">कला–मनोरञ्जन</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">खेलकुद</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="hamburger-menu">
+                            <div class="menu-open">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="overlay"></div>
@@ -144,10 +134,10 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <a href="#" title="" class="text">Euro 2024</a>
+                                    <a href="#" title="" class="text">नयाँ पुस्तालाई चित्तबुझ्दो काम प्रधानमन्त्रीहरूबाट भएन</a>
                                 </li>
                                 <li class="splide__slide">
-                                    <a href="#" title="" class="text">Congress-UML alliance</a>
+                                    <a href="#" title="" class="text">“कम्युनिस्टको सरकारले समाजलाई शिक्षित र बुद्धिजीवी बनाई देशको सेवा गर्न प्रेरित गर्नुपर्छ”</a>
                                 </li>
                                 <li class="splide__slide">
                                     <a href="#" title="" class="text">SEE Results</a>
@@ -628,7 +618,7 @@
                         </div>
                         <div class="though-sidebar">
                             <div class="main-title line">
-                                <h2 class="title"><span>Thoughs</span></h2>
+                                <h2 class="title"><span>विचार</span></h2>
                             </div>
                             <div class="avater-box-list row custom-gap-24-32">
                                 <div class="col-lg-12 col-md-6">

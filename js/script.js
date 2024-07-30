@@ -37,6 +37,8 @@ jQuery(function ($){
         });
 
         var navHeight = $('.site-header .bottom-header').innerHeight();
+        var bottomHeader = document.querySelector('.site-header .bottom-header');
+        var bottomHeaderTop = bottomHeader.offsetTop;
         $('.site-header .bottom-header').css('min-height', navHeight + 'px');
 
         $(window).scroll(function() {
@@ -45,10 +47,12 @@ jQuery(function ($){
             if($(window).width() < 991){
                 viewFooter = $('body').height() - $('footer').outerHeight();
             }
-            if (scroll > 200 && scroll < viewFooter) {
+            if (scroll > bottomHeaderTop && scroll < viewFooter) {
                 $('.site-header .bottom-header nav').addClass('sticky slideInDown');
+                $('.site-header .bottom-header .nav-bar').addClass('active');
             } else {
                 $('.site-header .bottom-header nav').removeClass('sticky slideInDown');
+                $('.site-header .bottom-header .nav-bar').removeClass('active');
             }
         });
 
@@ -73,14 +77,9 @@ jQuery(function ($){
         $(window).resize(function() {
             cloneTopBar();
         });
-        
-    });
+    });    
 
 });
-
-function clearSearch() {
-    document.getElementById('searchInput').value = '';
-}
 
 function initializeSplide(selector, options, extensions) {
     document.querySelectorAll(selector).forEach(element => {
@@ -91,6 +90,60 @@ function initializeSplide(selector, options, extensions) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    function engtonepNumber(engnumber) {
+        const nepaliNumbers = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+        return nepaliNumbers[engnumber];
+    }
+
+    function convertToNepaliNumerals(number) {
+        return String(number).split('').map(engtonepNumber).join('');
+    }
+
+    function getNepaliDate() {
+        const now = new Date();
+        const nepaliMonths = ['बैशाख', 'जेठ', 'असार', 'साउन', 'भदौ', 'असोज', 'कार्तिक', 'मंसिर', 'पुस', 'माघ', 'फागुन', 'चैत'];
+        const nepaliWeekdays = ['आइतवार', 'सोमवार', 'मंगलवार', 'बुधवार', 'बिहिवार', 'शुक्रवार', 'शनिवार'];
+
+        // Convert the date to Nepali using a date conversion function/library (you may need to use a library for accurate conversion)
+        const nepaliDate = {
+            year: 2081,
+            month: 4,  
+            day: 15,
+            weekday: 2 
+        };
+
+        const nepYear = convertToNepaliNumerals(nepaliDate.year);
+        const nepMonth = nepaliMonths[nepaliDate.month - 1];
+        const nepDay = convertToNepaliNumerals(nepaliDate.day);
+        const nepWeekday = nepaliWeekdays[nepaliDate.weekday];
+
+        return `${nepDay} ${nepMonth} ${nepYear}, ${nepWeekday}`;
+    }
+
+    function updateTime() {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        const nepHours = convertToNepaliNumerals(hours);
+        const nepMinutes = convertToNepaliNumerals(String(minutes).padStart(2, '0'));
+        const nepSeconds = convertToNepaliNumerals(String(seconds).padStart(2, '0'));
+        const currentTime = `${nepHours}:${nepMinutes}:${nepSeconds} ${ampm}`;
+        document.getElementById('timeDisplay').textContent = currentTime;
+
+        const currentDate = getNepaliDate();
+        document.getElementById('dateDisplay').textContent = currentDate;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+});
+
 
 if (document.querySelector('.banner-slide')) {
     initializeSplide('.banner-slide', {

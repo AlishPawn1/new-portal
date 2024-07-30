@@ -1,7 +1,15 @@
 
 
-@media screen and (min-width: 1400px) {
-    
+@media screen and (min-width: 1025px) {
+    .primary-menu > .menu-dropdown{
+        position: relative;
+    }
+    .primary-menu .menu-dropdown:hover > .sub-menu {
+        display: block ;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    } 
 }
 @media screen and (max-width: 1024px) {
     .custom-gap-24-32{
@@ -19,23 +27,25 @@
         --bs-gutter-y: 3rem;
     }
     .logo-search-login .search-box{
-        max-width: 400px;
+        max-width: 300px;
     }
-    .hamburger-menu-wrap, .menu-close{
+    .top-text-wrap{
+        justify-content: end;
+        flex: 0 0 370px;
+    }
+    .hamburger-menu, .menu-close{
         display: block;
     }
-    .hamburger-menu{
-        text-align: end;
+    .bottom-header nav .nav-bar{
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .hamburger-menu .menu-open{
+        display: flex;
+        align-items: center;
     }
     .hamburger-menu i{
         font-size: 25px;
-    }
-    .hamburger-menu-wrap .row{
-        padding: 20px 0;
-        min-height: 60px;
-    }
-    .hamburger-menu-wrap .logo{
-        display: none;
     }
     .sticky .hamburger-menu-wrap .logo{
         display: block;
@@ -108,6 +118,30 @@
     .video-content .video .video-container, .video-content .video iframe{
         min-height: 400px;
     }
+    .logo-search-login .logo{
+        flex: 0 0 160px;
+    }
+    .latest-update .text-wrap .splide{
+        flex: 0 0 calc(100% - 145px);
+        max-width: calc(100% - 145px);
+    }
+    .primary-menu > .more-link > a{
+        font-size: 0;
+        padding: 0;
+        display: none;
+    }
+    .sub-menu{
+        position: static;
+        transform: unset;
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        border: 0;
+        padding: 0;
+    }
+    .logo-search-login{
+        padding: 20px 0;
+    }
 }
 @media screen and (max-width: 991px) {
     .hamburger-menu-wrap .row{
@@ -123,11 +157,15 @@
     .hamburger-menu-wrap .logo{
         display: block;
     }
-    .logo-search-login{
+    .logo-search-login .search-box{
         display: none;
     }
     .top-text-wrap .item{
         font-size: 12px;
+    }
+    .top-text-wrap .time #timeDisplay{
+        max-width: 56px;
+        width: 100%;
     }
     .search-box{
         padding: 0 20px;
@@ -183,10 +221,6 @@
     .latest-update-slide a.text{
         font-size: 12px;
     }
-    .latest-update .text-wrap{
-        gap: 10px;
-        padding-right: 20px;
-    }
     .latest-update .text-wrap::after{
         width: 20px;
     }
@@ -223,7 +257,7 @@
         margin-bottom: 15px;
     }
     .error-content{
-        min-height: calc(75vh - 140px);
+        min-height: calc(100vh - 265px);
     }
     .error-content .title {
         font-size: 64px;
@@ -255,5 +289,23 @@
     }
     .search-section .main-title .title{
         font-size: 22px;
+    }
+    .logo-search-login .wrap{
+        justify-content: center;
+    }
+    .unicode{
+        display: none;
+    }
+    .top-text-wrap{
+        justify-content: space-between;
+    }
+    .top-text-wrap .item + .item::before{
+        content: unset;
+    }
+    .top-text-wrap{
+        flex: 0 0 auto;
+    }
+    .top-text-wrap .time{
+        justify-content: end;
     }
 }
