@@ -311,4 +311,7 @@
     .top-text-wrap .time{
         justify-content: end;
     }
+    .top-footer{
+        padding-bottom: 30px;
+    }
 }
