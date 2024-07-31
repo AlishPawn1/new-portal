@@ -15,6 +15,9 @@
     .custom-gap-24-32{
         --bs-gutter-y: 16px;
     }
+    .feature-grid{
+        grid-column-gap: 24px;
+    }
     /* .custom-gap-32-24{
         --bs-gutter-x: 24px;
         --bs-gutter-y: 16px;
@@ -84,7 +87,7 @@
     .menu-close{
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 15px;
     }
     .menu-close i{
         font-size: 24px;
@@ -92,7 +95,12 @@
     .primary-menu > li > a{
         width: 100%;
         border-radius: 0;
-        padding: 10px 20px;
+        padding: 10px 15px;
+        font-size: 18px;
+    }
+    .sub-menu li a{
+        padding: 10px 15px;
+        font-size: 18px;
     }
     .banner-box .image{
         height: 400px;
@@ -145,7 +153,7 @@
         display: none;
     }
     .search-box{
-        padding: 0 20px;
+        padding: 0 15px;
         order: 1;
     }
     .category-list-section .btn-wrap{
@@ -222,7 +230,7 @@
         align-items: baseline;
     }
     .bottom-to-top{
-        right: 10px;
+        right: 12px;
         bottom: 15px;
     }
     .main-title.line h1.title span{

@@ -156,6 +156,20 @@ a, input[type="submit"], button {
     padding-bottom: 0;
 }
 /* inner-banner */
+
+/* time-list */
+.time-list{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    justify-content: start;
+    align-items: center;
+}
+.time-list.center{
+    justify-content: center;
+}
+/* time-list */
+
 /* pagination */
 
 .pagination{
@@ -958,7 +972,7 @@ input, textarea, select{
 }
 .banner-box .title{
     font-size: 32px;
-    line-height: 38px;
+    line-height: 1.2;
     font-weight: 600;
     margin-bottom: 12px;
 }
@@ -971,6 +985,13 @@ input, textarea, select{
 }
 .banner-slide .splide__pagination{
     bottom: 0;
+}
+.banner-box .main-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.banner-box .main-title .title{
+    margin-bottom: 10px;
 }
 
 /* banner */
