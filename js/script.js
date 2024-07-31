@@ -59,15 +59,11 @@ jQuery(function ($){
         function cloneTopBar() {
             const windowWidth = $(window).width();
     
-            if (windowWidth <= 991) {
+            if (windowWidth <= 1024) {
                 if (!$('.menu-wrap > .search-box').length) {
                     $('.search-box').clone().appendTo('.menu-wrap');
                 }
-                if (!$('.menu-wrap > .login-register').length) {
-                    $('.login-register').clone().appendTo('.menu-wrap');
-                }
             } else {
-                $('.menu-wrap > .login-register').remove();
                 $('.menu-wrap > .search-box').remove();
             }
         }
@@ -76,6 +72,21 @@ jQuery(function ($){
         
         $(window).resize(function() {
             cloneTopBar();
+        });
+
+        var btn = $('#bottom-to-top');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+            } else {
+            btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
         });
     });    
 
@@ -101,27 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return String(number).split('').map(engtonepNumber).join('');
     }
 
-    function getNepaliDate() {
-        const now = new Date();
-        const nepaliMonths = ['बैशाख', 'जेठ', 'असार', 'साउन', 'भदौ', 'असोज', 'कार्तिक', 'मंसिर', 'पुस', 'माघ', 'फागुन', 'चैत'];
-        const nepaliWeekdays = ['आइतवार', 'सोमवार', 'मंगलवार', 'बुधवार', 'बिहिवार', 'शुक्रवार', 'शनिवार'];
-
-        // Convert the date to Nepali using a date conversion function/library (you may need to use a library for accurate conversion)
-        const nepaliDate = {
-            year: 2081,
-            month: 4,  
-            day: 15,
-            weekday: 2 
-        };
-
-        const nepYear = convertToNepaliNumerals(nepaliDate.year);
-        const nepMonth = nepaliMonths[nepaliDate.month - 1];
-        const nepDay = convertToNepaliNumerals(nepaliDate.day);
-        const nepWeekday = nepaliWeekdays[nepaliDate.weekday];
-
-        return `${nepDay} ${nepMonth} ${nepYear}, ${nepWeekday}`;
-    }
-
     function updateTime() {
         const now = new Date();
         let hours = now.getHours();
@@ -135,9 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const nepSeconds = convertToNepaliNumerals(String(seconds).padStart(2, '0'));
         const currentTime = `${nepHours}:${nepMinutes}:${nepSeconds} ${ampm}`;
         document.getElementById('timeDisplay').textContent = currentTime;
-
-        const currentDate = getNepaliDate();
-        document.getElementById('dateDisplay').textContent = currentDate;
     }
 
     setInterval(updateTime, 1000);
@@ -149,9 +136,11 @@ if (document.querySelector('.banner-slide')) {
     initializeSplide('.banner-slide', {
         perPage: 1,
         pagination: false,
+        gap: 10,
         breakpoints: {
             1024: {
                 arrows: false,
+                pagination: true,
             }
         }
     });

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Result page</title>
+    <title>unicode page</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/splide.min.css">
     <link rel="stylesheet" type="text/css" href="css/all.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
+
 <body>
 
     <!-- header -->
@@ -161,110 +163,75 @@
     </header>
     <!-- header -->
     
-    <!-- search-section -->
-    <section class="search-section section-md-gaps">
+    <!-- unicode-section -->
+    <section class="unicodepage-section section-md-gaps">
         <div class="container">
-            <!-- successfull -->
-            <div class="main-title">
-                <h1 class="title">Search result for: <span>"Lorem text"</span></h1>
-            </div>
-            <div class="row g-md-4 g-3">
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vertical-box">
-                        <a href="#" title="">
-                            <div class="image">
-                                <img src="image/trending-1.png" class="img-cover" alt="">
-                            </div>
-                            <div class="content">
-                                <h3 class="title">The Prime Minister will resign if it comes to political ground</h3>
-                                <div class="vertical-bottom">
-                                    <span class="date">July 7, 2024</span>
-                                    <span class="author-name">गोकर्णप्रसाद उपाध्याय</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vertical-box">
-                        <a href="#" title="">
-                            <div class="image">
-                                <!-- <img src="image/trending-1.png" class="img-cover" alt=""> -->
-                            </div>
-                            <div class="content">
-                                <h3 class="title">The Prime Minister will resign if it comes to political ground</h3>
-                                <div class="vertical-bottom">
-                                    <span class="date">July 7, 2024</span>
-                                    <span class="author-name">गोकर्णप्रसाद उपाध्याय</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vertical-box">
-                        <a href="#" title="">
-                            <div class="image">
-                                <img src="image/trending-1.png" class="img-cover" alt="">
-                            </div>
-                            <div class="content">
-                                <h3 class="title">The Prime Minister will resign if it comes to political ground</h3>
-                                <div class="vertical-bottom">
-                                    <span class="date">July 7, 2024</span>
-                                    <span class="author-name">गोकर्णप्रसाद उपाध्याय</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="vertical-box">
-                        <a href="#" title="">
-                            <div class="image">
-                                <img src="image/trending-1.png" class="img-cover" alt="">
-                            </div>
-                            <div class="content">
-                                <h3 class="title">The Prime Minister will resign if it comes to political ground</h3>
-                                <div class="vertical-bottom">
-                                    <span class="date">July 7, 2024</span>
-                                    <span class="author-name">गोकर्णप्रसाद उपाध्याय</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <ul class="pagination">
-                <li>
-                    <a href="#" class="page-numbers prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16" fill="none">
-                            <path d="M1 1L7 8L0.999999 15" stroke="black" stroke-width="1.5"/>
-                        </svg>
-                    </a>
+            <ul class="unicode-tabs nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="preetitounicode-tab" data-bs-toggle="tab" data-bs-target="#preetitounicode-tab-pane" type="button" role="tab" aria-controls="preetitounicode-tab-pane" aria-selected="true">Preeti to Unicode</button>
                 </li>
-                <li>
-                    <span class="page-numbers current">1</span>
-                </li>
-                <li>
-                    <a href="#" class="page-numbers">2</a>
-                </li>
-                <li>
-                    <a href="#" class="page-numbers next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 8 16" fill="none">
-                            <path d="M1 1L7 8L0.999999 15" stroke="black" stroke-width="1.5"/>
-                        </svg>
-                    </a>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="unicodetopreeti-tab" data-bs-toggle="tab" data-bs-target="#unicodetopreeti-tab-pane" type="button" role="tab" aria-controls="unicodetopreeti-tab-pane" aria-selected="false">Unicode to Preeti</button>
                 </li>
             </ul>
-
-
-            <!-- unsuccessfull -->
-             <div class="main-title">
-                <h2 class="title">Your search results were not found</h2>
-             </div>
+            <div class="tab-content unicode-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="preetitounicode-tab-pane" role="tabpanel" aria-labelledby="preetitounicode-tab">
+                    <div class="unicode_converter-item">
+                        <div class="item">
+                            <div class="preeti-textarea-wrapper">
+                                <div class="content">
+                                    <p class="instruction_text">तलको बक्समा प्रीति फन्टका अक्षरहरु लेख्नुहोस् वा पेस्ट गर्नुहोस्:</p>
+                                </div>
+                                <div class="textarea-wrapper c-arrow">
+                                    <textarea class="unicode_text_one" autocomplete="off"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="unicode-textarea-wrapper">
+                                <div class="spcl_character_wrap">
+                                    <div class="content">
+                                        <p class="instruction_text">प्रीति फन्टका अक्षरहरू अनुसारको युनिकोड तलको बक्समा हेर्नुहोस् :</p>
+                                        <div class="spcl_character">
+                                            <p>Special Characters : र्‍य  र्‍  ऋ ॠ ङ ञ क्ष ज्ञ ॐ ण ।</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="textarea-wrapper">
+                                    <textarea class="unicode_text"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="unicodetopreeti-tab-pane" role="tabpanel" aria-labelledby="unicodetopreeti-tab">
+                    <div class="unicode_converter-item">
+                        <div class="item">
+                            <div class="unicode-textarea-wrapper">
+                                <div class="content">
+                                    <p class="instruction_text">तलको बक्समा युनिकोड फन्टमा टाइप गर्नुहोस् वा पेस्ट गर्नुहोस् :</p>
+                                </div>
+                                <div class="textarea-wrapper c-arrow">
+                                    <textarea class="unicode_text_two" autocomplete="off"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="preeti-textarea-wrapper">
+                                <div class="content">
+                                    <p class="instruction_text">युनिकोडका अक्षरहरू अनुसारको प्रीति फन्टका अक्षरहरू तलको बक्समा हेर्नुहोस् :</p>
+                                </div>
+                                <div class="textarea-wrapper">
+                                    <textarea class=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <!-- search-section -->
+    <!-- unicode-section -->
 
     <!-- footer -->
     <footer class="site-footer">
@@ -428,6 +395,7 @@
     <script src="js/splide-auto-scroll.js"></script>
     <script src="js/splide.min.js"></script>
     <script src="js/script.js"></script>
-    
+
 </body>
+
 </html>
