@@ -44,7 +44,7 @@
     }
     .bottom-header nav .nav-bar{
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 15px 0;
     }
     .hamburger-menu .menu-open{
         display: flex;
@@ -166,6 +166,9 @@
         min-height: 65px;
         height: auto;
     }
+    .single-news-content .text-wrapper{
+        max-width: 475px;
+    }
 }
 @media screen and (max-width: 991px) {
     .custom-gap-32-24{
@@ -188,7 +191,7 @@
         font-size: 12px;
     }
     .top-text-wrap .time #timeDisplay{
-        min-width: 56px;
+        min-width: 61px;
         width: 100%;
     }
     .login-register{
@@ -204,15 +207,21 @@
         margin-top: 30px;
     }
     .banner-slide .splide__pagination{
-        bottom: -20px;
+        bottom: -30px;
     }
     .unicode-content{
         padding: 30px 20px;
+    }
+    .single-news-content .text-wrapper{
+        max-width: 540px;
     }
 }
 @media screen and (max-width: 575px) {
     .row{
         --bs-gutter-x: 24px;
+    }
+    .container{
+        padding: 0 15px;
     }
     .custom-gap-24-16, .custom-gap-32-24{
         --bs-gutter-y: 16px;
@@ -230,7 +239,7 @@
         align-items: baseline;
     }
     .bottom-to-top{
-        right: 12px;
+        right: 15px;
         bottom: 15px;
     }
     .main-title.line h1.title span{
@@ -323,6 +332,8 @@
     }
     .next-prev-btn > div{
         width: 100%;
+        flex: 1;
+        max-width: 100%;
     }
     .next-prev-btn > div + div{
         margin-top: 20px;
@@ -374,5 +385,33 @@
     }
     .unicode-content{
         padding: 30px 10px;
+    }
+    .error-section-img .error-content .image{
+        height: 300px;
+    }
+    .single-news-content .other-blockquote{
+        padding-left: 0;
+    }
+    .single-news-content .other-blockquote::after{
+        content: none;
+    }
+    .single-news-content .other-blockquote p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .share-news ul{
+        position: static;
+        margin-left: 0;
+        width: auto;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .single-news-content .text-wrapper{
+        flex-direction: column;
+    }
+    .share-news li + li{
+        margin: 0;
+        margin-left: 10px;
+        margin-bottom: 20px;
     }
 }

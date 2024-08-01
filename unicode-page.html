@@ -87,7 +87,7 @@
                                     <a href="search-result.html" title="">Nation</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="">राजनीति</a>
+                                    <a href="errorpage2.html" title="">राजनीति</a>
                                 </li>
                                 <li>
                                     <a href="#" title="">विचार</a>
@@ -182,8 +182,8 @@
                                 <div class="content">
                                     <p class="instruction_text">तलको बक्समा प्रीति फन्टका अक्षरहरु लेख्नुहोस् वा पेस्ट गर्नुहोस्:</p>
                                 </div>
-                                <div class="textarea-wrapper c-arrow">
-                                    <textarea class="unicode_text_one" autocomplete="off"></textarea>
+                                <div class="textarea-wrapper">
+                                    <textarea class="unicode_text_one" id="unicode_english_nepali" oninput="change_english_unicode()" autocomplete="off"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                                     </div>
                                 </div>
                                 <div class="textarea-wrapper">
-                                    <textarea class="unicode_text"></textarea>
+                                    <textarea class="unicode_text" id="unicode_nepali_english"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
                                 <div class="content">
                                     <p class="instruction_text">तलको बक्समा युनिकोड फन्टमा टाइप गर्नुहोस् वा पेस्ट गर्नुहोस् :</p>
                                 </div>
-                                <div class="textarea-wrapper c-arrow">
+                                <div class="textarea-wrapper">
                                     <textarea class="unicode_text_two" autocomplete="off"></textarea>
                                 </div>
                             </div>
@@ -380,11 +380,8 @@
             </div>
         </div>
         <button class="bottom-to-top" id="bottom-to-top">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25.552" height="22.495" viewBox="0 0 25.552 22.495">
-                <g id="Group_67" data-name="Group 67" transform="translate(1.366 1.366)">
-                  <line id="Line_2" data-name="Line 2" x2="22.82" transform="translate(11.41 0) rotate(60)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                  <line id="Line_7" data-name="Line 7" x2="22.82" transform="translate(11.41 0) rotate(120)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-                </g>
+            <svg xmlns="http://www.w3.org/2000/svg" width="91" height="50" viewBox="0 0 91 50" fill="none" style="transform: rotate(180deg);">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M90.9091 6.3188L84.5182 0L45.3955 37.551L42.5 35L41.2455 33.5671L6.48637 0.20419L0 6.42756C9.60454 15.6503 36.4273 41.3955 45.3955 50C52.0591 43.6091 45.5636 49.8415 90.9091 6.3188Z" fill="#fff"/>
             </svg>
         </button>
     </footer>
